@@ -29,6 +29,7 @@
         "fideloper/proxy": "~3.3"
     },
     "require-dev": {
+        "doctrine/instantiator": "~1.0.2",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
