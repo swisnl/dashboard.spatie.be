@@ -1,8 +1,10 @@
 const { mix } = require('laravel-mix');
 
 mix
-    .js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/css/app.css', 'public/css')
+    .setPublicPath('public_html/')
+
+    .js('resources/assets/js/app.js', 'public_html/js')
+    .sass('resources/assets/css/app.css', 'public_html/css')
 
 	.version()
 
