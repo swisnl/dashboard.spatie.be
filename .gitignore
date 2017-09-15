@@ -1,6 +1,7 @@
 # BACK END
 .env
 _ide_helper*.php
+/.idea
 /vendor
 
 # FRONT END
