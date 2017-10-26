@@ -1,6 +1,7 @@
 <template>
     <tile :position="position">
         <section class="time-weather">
+            <span class="time-weather__time-zone">{{ weatherCity }}</span>
             <time class="time-weather__content">
                 <span class="time-weather__date">{{ date }}</span>
                 <span class="time-weather__time">{{ time }}</span>
@@ -17,7 +18,7 @@
 
 <script>
     import Tile from './atoms/Tile';
-    import moment from 'moment';
+    import moment from 'moment-timezone';
     import weather from '../services/weather/Weather';
 
     export default {
@@ -27,13 +28,19 @@
         },
 
         props: {
+            weatherCity: {
+                type: String,
+            },
             dateFormat: {
                 type: String,
                 default: 'DD-MM-YYYY',
             },
             timeFormat: {
                 type: String,
-                default: 'HH:mm:ss',
+                default: 'HH:mm',
+            },
+            timeZone: {
+                type: String,
             },
             position: {
                 type: String,
@@ -61,12 +68,12 @@
 
         methods: {
             refreshTime() {
-                this.date = moment().format(this.dateFormat);
-                this.time = moment().format(this.timeFormat);
+                this.date = moment().tz(this.timeZone).format(this.dateFormat);
+                this.time = moment().tz(this.timeZone).format(this.timeFormat);
             },
 
             async fetchWeather() {
-                const conditions = await weather.conditions();
+                const conditions = await weather.conditions(this.weatherCity);
 
                 this.weather.temperature = conditions.temp;
                 this.weather.iconClass = `wi-yahoo-${conditions.code}`;
