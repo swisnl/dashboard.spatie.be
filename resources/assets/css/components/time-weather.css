@@ -51,15 +51,10 @@
     margin-left: .25em;
 }
 
-@media (min-height: 60em) {
+@media (min-height: 45em) {
+    .time-weather__time-zone,
     .time-weather__weather,
     .time-weather__date {
-        display: block;
-    }
-}
-
-@media (min-height: 45em) {
-    .time-weather__time-zone {
         display: block;
     }
 }
