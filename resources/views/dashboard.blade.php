@@ -11,7 +11,7 @@
     <npm position="b2"></npm>
     <github position="b3"></github>
     <music position="c1:d1"></music>
-    <tasks team-member="alex" position="c2"></tasks>
+    <feedback position="c2"></feedback>
     <tasks team-member="brent" position="d2"></tasks>
     <tasks team-member="freek" position="e2"></tasks>
     <tasks team-member="harish" position="c3"></tasks>

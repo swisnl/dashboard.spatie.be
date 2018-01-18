@@ -14,6 +14,7 @@ import Tasks from './components/Tasks';
 import TimeWeather from './components/TimeWeather';
 import Twitter from './components/Twitter';
 import Uptime from './components/Uptime';
+import Feedback from './components/Feedback';
 
 new Vue({
 
@@ -22,6 +23,7 @@ new Vue({
     components: {
         Dashboard,
         Calendar,
+        Feedback,
         Github,
         InternetConnection,
         Music,
