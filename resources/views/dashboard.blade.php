@@ -10,13 +10,9 @@
     <packagist position="b1"></packagist>
     <npm position="b2"></npm>
     <github position="b3"></github>
-    <music position="c1:d1"></music>
-    <feedback position="c2"></feedback>
-    <tasks team-member="brent" position="d2"></tasks>
-    <tasks team-member="freek" position="e2"></tasks>
-    <tasks team-member="harish" position="c3"></tasks>
-    <tasks team-member="seb" position="d3"></tasks>
-    <tasks team-member="willem" position="e3"></tasks>
+    <feedback position="c1"></feedback>
+    <game-of-tests position="c1:c2"></game-of-tests>
+    <fussbally position="d2"></fussbally>
     <time-weather position="e1" date-format="ddd DD/MM" time-zone="Asia/Kolkata" weather-city="Mira-Bhayandar"></time-weather>
     <time-weather position="f1" date-format="ddd DD/MM" time-zone="Europe/Brussels" weather-city="Antwerp"></time-weather>
     <calendar position="f2:f3"></calendar>

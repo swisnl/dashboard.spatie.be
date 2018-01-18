@@ -1,0 +1,11 @@
+.fussbally__header span {
+    color: red;
+}
+
+span.fussbally__down {
+    color: red;
+}
+
+span.fussbally__up {
+    color: green;
+}

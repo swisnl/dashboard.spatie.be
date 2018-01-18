@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Components\Calendar\FetchCalendarEvents::class,
         \App\Console\Components\Service\FetchFeedback::class,
+        \App\Console\Components\Fussbally\FetchStats::class,
         \App\Console\Components\GitHub\FetchTotals::class,
         \App\Console\Components\InternetConnection\SendHeartbeat::class,
         \App\Console\Components\Npm\FetchTotals::class,

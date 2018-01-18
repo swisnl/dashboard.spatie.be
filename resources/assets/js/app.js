@@ -16,6 +16,7 @@ import Twitter from './components/Twitter';
 import Uptime from './components/Uptime';
 import Feedback from './components/Feedback';
 import GameOfTests from './components/GameOfTests';
+import Fussbally from './components/Fussbally';
 
 new Vue({
 
@@ -25,6 +26,7 @@ new Vue({
         Dashboard,
         Calendar,
         Feedback,
+        Fussbally,
         Github,
         InternetConnection,
         Music,
