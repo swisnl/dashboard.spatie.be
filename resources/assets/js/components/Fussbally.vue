@@ -79,7 +79,6 @@
             getEventHandlers() {
                 return {
                     'Fussbally.StatsFetched': response => {
-                        console.log(response);
                         this.stats = response.stats;
                     },
                 };
