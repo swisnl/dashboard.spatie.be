@@ -17,4 +17,8 @@ return [
     'packagist' => [
         'vendor' => env('PACKAGIST_VENDOR'),
     ],
+
+    'feedback' => [
+        'url' => env('FEEDBACK_JSON_URL'),
+    ]
 ];
