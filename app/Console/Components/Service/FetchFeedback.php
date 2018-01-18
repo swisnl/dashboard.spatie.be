@@ -3,6 +3,7 @@
 namespace App\Console\Components\Service;
 
 use App\Events\Service\FeedbackFetched;
+use GuzzleHttp\Client;
 use Http\Client\HttpClient;
 use Http\Discovery\MessageFactoryDiscovery;
 use http\Env\Request;
@@ -15,11 +16,11 @@ class FetchFeedback extends Command
 
     protected $description = 'Fetch service feedback';
 
-    public function handle(HttpClient $client)
+    public function handle()
     {
-
-        $request = MessageFactoryDiscovery::find()->createRequest('GET', config());
-        $feedback = json_decode($client->sendRequest($request), true);
+        $httpClient = new Client();
+        $url = config('services.feedback.url');
+        $feedback = json_decode($httpClient->request('GET', $url)->getBody()->getContents(), true);
 
         event(new FeedbackFetched($feedback));
     }
