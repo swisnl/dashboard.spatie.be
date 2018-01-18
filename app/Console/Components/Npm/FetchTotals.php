@@ -39,14 +39,13 @@ class FetchTotals extends Command
 
     private function getPackageList()
     {
-        $packages = json_decode(file_get_contents('https://spatie.be/en/api/packages'));
+        $packages = [
+            'flexform-sass',
+            'jquery-contextmenu',
+            'sass-rhythm',
+            'build-size',
+        ];
 
-        return collect($packages)
-            ->filter(function ($package) {
-                return $package->type === 'javascript';
-            })
-            ->map(function ($package) {
-                return $package->name;
-            });
+        return collect($packages);
     }
 }
