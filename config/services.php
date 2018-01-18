@@ -25,4 +25,8 @@ return [
     'game-of-tests' => [
         'base_url' => env('GAME_OF_TESTS_BASE_URL'),
     ],
+
+    'fussbally' => [
+        'url' => env('FUSSBALLY_STATS_URL'),
+    ]
 ];
