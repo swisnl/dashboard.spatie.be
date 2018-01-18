@@ -4,4 +4,5 @@
 @import 'helpers/*';
 @import 'layout/*';
 @import 'components/*';
+@import 'transitions/*';
 @import 'vendor/*';

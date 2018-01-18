@@ -20,5 +20,9 @@ return [
 
     'feedback' => [
         'url' => env('FEEDBACK_JSON_URL'),
-    ]
+    ],
+
+    'game-of-tests' => [
+        'base_url' => env('GAME_OF_TESTS_BASE_URL'),
+    ],
 ];
