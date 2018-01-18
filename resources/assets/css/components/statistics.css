@@ -1,6 +1,12 @@
+.statistics--absolute {
+    position: absolute;
+    left: var(--grid-padding);
+    right: var(--grid-padding);
+}
+
 .statistic {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     font-size: var(--font-size-s);
 }
@@ -12,6 +18,12 @@
 
 .statistic__stars {
     background-image: url('/images/svg/star.svg');
+}
+
+.statistic__crown {
+    background-image: url('/images/svg/crown.svg');
+    margin-left: .8vh;
+    margin-right: auto;
 }
 
 .statistic__count {

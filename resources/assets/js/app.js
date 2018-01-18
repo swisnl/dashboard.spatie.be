@@ -15,6 +15,7 @@ import TimeWeather from './components/TimeWeather';
 import Twitter from './components/Twitter';
 import Uptime from './components/Uptime';
 import Feedback from './components/Feedback';
+import GameOfTests from './components/GameOfTests';
 
 new Vue({
 
@@ -33,6 +34,7 @@ new Vue({
         TimeWeather,
         Twitter,
         Uptime,
+        GameOfTests,
     },
 
     created() {
