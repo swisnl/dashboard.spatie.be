@@ -1,0 +1,32 @@
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-section__header {
+    flex-grow: 0;
+}
+
+.feedback-list {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.feedback {
+    border: none;
+    padding: 0;
+    width: 25%;
+}
+
+.feedback__image {
+    width: 100%;
+}
+
+.feedback__count {
+    display: inline-block;
+    font-size: var(--font-size-l);
+    text-align: center;
+    width: 100%;
+}

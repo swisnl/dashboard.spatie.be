@@ -1,22 +1,21 @@
 <template>
     <tile :position="position" modifiers="overflow">
-        <section class="statistics">
-            <h1>Service</h1>
-            <ul>
-                <li class="statistic">
-                    <span class="statistic__label">Tevreden</span>
-                    <span class="statistic__count">{{ feedback.tevreden}}</span>
+        <section class="feedback-section">
+            <h1 class="feedback-section__header">Service feedback</h1>
+            <ul class="feedback-list">
+                <li class="feedback">
+                    <img class="feedback__image" src="../../../../node_modules/twemoji/2/svg/1f600.svg">
+                    <span class="feedback__count">{{ feedback.tevreden}}</span>
                 </li>
-                <li class="statistic">
-                    <span class="statistic__label">Neutraal</span>
-                    <span class="statistic__count">{{ feedback.neutraal}}</span>
+                <li class="feedback">
+                    <img class="feedback__image" src="../../../../node_modules/twemoji/2/svg/1f610.svg">
+                    <span class="feedback__count">{{ feedback.neutraal}}</span>
                 </li>
-                <li class="statistic">
-                    <span class="statistic__label">Ontevreden</span>
-                    <span class="statistic__count">{{ feedback.ontevreden}}</span>
+                <li class="feedback">
+                    <img class="feedback__image" src="../../../../node_modules/twemoji/2/svg/1f625.svg">
+                    <span class="feedback__count">{{ feedback.ontevreden}}</span>
                 </li>
             </ul>
-
         </section>
     </tile>
 </template>

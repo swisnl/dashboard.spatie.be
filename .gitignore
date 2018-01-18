@@ -9,6 +9,7 @@ _ide_helper*.php
 /npm-debug.log
 /public_html/build
 /public_html/css
+/public_html/fonts/vendor
 /public_html/js
 /public_html/media
 /public_html/mix-manifest.json
