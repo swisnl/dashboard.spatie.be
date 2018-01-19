@@ -4,12 +4,12 @@
 
 @javascript(compact('pusherKey', 'pusherCluster', 'usingNodeServer'))
 
-<dashboard id="dashboard" columns="5" rows="4">
+<dashboard id="dashboard" columns="5" rows="3">
     <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a3"></twitter>
     <uptime position="a1:a3"></uptime>
     <packagist position="b1"></packagist>
     <npm position="b2"></npm>
-    <github position="b3"></github>
+    <github position="b3:b4"></github>
     <feedback position="c1"></feedback>
     <game-of-tests position="c2:c4"></game-of-tests>
     <time-weather position="d1" date-format="ddd DD/MM" time-zone="Europe/Amsterdam" weather-city="Leiden"></time-weather>
