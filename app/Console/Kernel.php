@@ -34,13 +34,12 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('dashboard:fetch-calendar-events')->everyMinute();
-        $schedule->command('dashboard:fetch-current-track')->everyMinute();
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
-        $schedule->command('dashboard:fetch-tasks')->everyFiveMinutes();
         $schedule->command('dashboard:fetch-github-totals')->everyThirtyMinutes();
         $schedule->command('dashboard:fetch-packagist-totals')->hourly();
         $schedule->command('dashboard:fetch-npm-totals')->hourly();
         $schedule->command('dashboard:fetch-game-of-tests-all')->hourly();
+        $schedule->command('dashboard:fetch-feedback')->hourly();
+        $schedule->command('dashboard:fetch-fussbally')->hourly();
     }
 }
