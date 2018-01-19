@@ -19,5 +19,6 @@ class UpdateDashboard extends Command
         $this->call('dashboard:fetch-game-of-tests-all');
         $this->call('dashboard:fetch-feedback');
         $this->call('dashboard:fetch-fussbally');
+        $this->call('dashboard:fetch-calendar-events');
     }
 }
