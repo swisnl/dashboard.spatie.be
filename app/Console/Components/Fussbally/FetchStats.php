@@ -25,7 +25,7 @@ class FetchStats extends Command
         $cleanStats = [];
         $i = 0;
         foreach ($stats['stats']['users'] as $user) {
-            if ($i++ > 10) {
+            if ($i++ > 20) {
                 break;
             }
             $cleanStats[] = [
