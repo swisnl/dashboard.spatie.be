@@ -61,3 +61,12 @@
 .tile > * {
     height: 100%;
 }
+
+.tile--swis-color {
+    --tile-background-color: var(--swis);
+}
+
+.tile--swis-background {
+    background-size: auto;
+    background: var(--swis) url(https://www.swis.nl/images/swis-logo.svg) no-repeat center;
+}

@@ -10,6 +10,7 @@ import InternetConnection from './components/InternetConnection';
 import Music from './components/Music';
 import Npm from './components/Npm';
 import Packagist from './components/Packagist';
+import Swis from './components/Swis';
 import Tasks from './components/Tasks';
 import TimeWeather from './components/TimeWeather';
 import Twitter from './components/Twitter';
@@ -32,6 +33,7 @@ new Vue({
         Music,
         Npm,
         Packagist,
+        Swis,
         Tasks,
         TimeWeather,
         Twitter,
