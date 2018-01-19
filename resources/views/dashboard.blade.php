@@ -4,7 +4,7 @@
 
 @javascript(compact('pusherKey', 'pusherCluster', 'usingNodeServer'))
 
-<dashboard id="dashboard" columns="4" rows="3">
+<dashboard id="dashboard" columns="5" rows="4">
     <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a3"></twitter>
     <uptime position="a1:a3"></uptime>
     <packagist position="b1"></packagist>
