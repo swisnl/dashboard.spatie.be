@@ -40,6 +40,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('dashboard:fetch-npm-totals')->hourly();
         $schedule->command('dashboard:fetch-game-of-tests-all')->hourly();
         $schedule->command('dashboard:fetch-feedback')->hourly();
-        $schedule->command('dashboard:fetch-fussbally')->hourly();
+        $schedule->command('dashboard:fetch-fussbally')->everyFiveMinutes();
+        $schedule->command('dashboard:fetch-calendar-events')->everyThirtyMinutes();
     }
 }
