@@ -1,0 +1,32 @@
+.github-events__events {
+    font-size: var(--font-size-xxs);
+}
+
+.github-events__event {
+}
+
+.github-events__event__avatar {
+    height: 1rem;
+    margin: .2rem;
+    float: left;
+    border-radius: 3px;
+}
+
+.github-events__event__actor {
+    color: var(--red-light);
+}
+
+.github-events__event__repo {
+    color: var(--gray-dark);
+}
+
+.github-events__row {
+}
+
+.github-events__event__title {
+    font-weight: var(--font-weight-bold);
+}
+
+.github-events__event__date {
+    color: var(--red-light);
+}

@@ -11,6 +11,14 @@ class GitHubApi
     public function __construct(Client $client)
     {
         $this->client = $client;
+
+    }
+
+    public function fetchEvents(string $userName): Collection
+    {
+        $events = $this->client->user()->publicEvents($userName);
+
+        return collect($events);
     }
 
     public function fetchPublicRepositories(string $userName): Collection

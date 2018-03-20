@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Components\Service\FetchFeedback::class,
         \App\Console\Components\Fussbally\FetchStats::class,
         \App\Console\Components\GitHub\FetchTotals::class,
+        \App\Console\Components\GitHub\FetchEventList::class,
         \App\Console\Components\InternetConnection\SendHeartbeat::class,
         \App\Console\Components\Npm\FetchTotals::class,
         \App\Console\Components\Music\FetchCurrentTrack::class,
@@ -36,6 +37,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
         $schedule->command('dashboard:fetch-github-totals')->everyThirtyMinutes();
+        $schedule->command('dashboard:fetch-github-events')->everyThirtyMinutes();
         $schedule->command('dashboard:fetch-packagist-totals')->hourly();
         $schedule->command('dashboard:fetch-npm-totals')->hourly();
         $schedule->command('dashboard:fetch-game-of-tests-all')->hourly();

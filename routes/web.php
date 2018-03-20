@@ -10,3 +10,4 @@ Route::group([], function () {
 Route::post('/webhook/github', 'GitHubWebhookController@gitRepoReceivedPush');
 
 Route::ohDearWebhooks('/oh-dear-webhooks');
+

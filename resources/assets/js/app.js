@@ -6,6 +6,7 @@ import Vue from 'vue';
 import Dashboard from './components/Dashboard';
 import Calendar from './components/Calendar';
 import Github from './components/Github';
+import GithubEvents from './components/GithubEvents';
 import InternetConnection from './components/InternetConnection';
 import Music from './components/Music';
 import Npm from './components/Npm';
@@ -29,6 +30,7 @@ new Vue({
         Feedback,
         Fussbally,
         Github,
+        GithubEvents,
         InternetConnection,
         Music,
         Npm,
@@ -52,7 +54,7 @@ new Vue({
         if (window.dashboard.usingNodeServer) {
             options = {
                 broadcaster: 'socket.io',
-                host: 'http://dashboard.spatie.be:6001',
+                host: 'https://dashboard.swis.nl:6001',
             };
         }
 
