@@ -1,8 +1,9 @@
 .github-events__events {
-    font-size: var(--font-size-xxs);
+    font-size: .65rem;
 }
 
-.github-events__event {
+.github-events__event__row {
+    font-size: .65rem;
 }
 
 .github-events__event__avatar {
@@ -16,8 +17,13 @@
     color: var(--red-light);
 }
 
+.github-events__event__repo > div {
+    display: inline-block;
+}
+
 .github-events__event__repo {
     color: var(--gray-dark);
+    font-size: .4rem;
 }
 
 .github-events__row {

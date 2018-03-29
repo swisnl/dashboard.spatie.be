@@ -43,6 +43,7 @@ class FetchEventList extends Command
                 case "DeleteEvent";
                 case "CreateEvent";
                 case "PushEvent";
+                case "MemberEvent";
                     $action = false;
                     break;
                 default:
@@ -55,6 +56,7 @@ class FetchEventList extends Command
                 'repo' => $reponame,
                 'avatar_url' => $item['actor']['avatar_url'],
                 'action' => $action,
+                'date' => $item['created_at'],
             ];
         });
 

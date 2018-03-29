@@ -4,9 +4,9 @@
 
 @javascript(compact('pusherKey', 'pusherCluster', 'usingNodeServer'))
 
-<dashboard id="dashboard" columns="5" rows="3">
-    <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a1"></twitter>
-    <github-events position="a2:a4"></github-events>
+<dashboard id="dashboard" columns="5" rows="4">
+    <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a2"></twitter>
+    <github-events position="a3:a4"></github-events>
     <uptime position="a1:a3"></uptime>
     <packagist position="b1"></packagist>
     <npm position="b2"></npm>

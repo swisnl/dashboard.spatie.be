@@ -9,7 +9,7 @@
                         <div class="github-events__event__row">
                             <span class="github-events__event__actor">{{ event.actor }}</span> {{ event.action }}
                         </div>
-                        <div class="github-events__event__repo">{{ event.repo }}</div>
+                        <div class="github-events__event__repo">{{ event.repo }} - <relative-date :moment="event.date"></relative-date></div>
                     </li>
                 </template>
             </ul>
@@ -22,11 +22,13 @@
     import echo from '../mixins/echo';
     import Tile from './atoms/Tile';
     import saveState from 'vue-save-state';
+    import RelativeDate from './atoms/RelativeDate';
 
     export default {
 
         components: {
             Tile,
+            RelativeDate,
         },
 
         mixins: [echo, saveState],
