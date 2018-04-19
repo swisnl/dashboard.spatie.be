@@ -44,6 +44,7 @@ class FetchTotals extends Command
             'jquery-contextmenu',
             'sass-rhythm',
             'build-size',
+            'laravel-mix-svg-sprite',
         ];
 
         return collect($packages);
