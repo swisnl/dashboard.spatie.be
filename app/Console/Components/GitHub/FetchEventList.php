@@ -29,6 +29,19 @@ class FetchEventList extends Command
                 case 'IssuesEvent':
                     $action = $item['payload']['action'] . ' issue';
                     break;
+                case 'PullRequestReviewEvent':
+                case 'PullRequestReviewCommentEvent':
+                    $action = false;
+                    if (in_array($item['payload']['action'], ['created', 'submitted'])) {
+                        $action = 'reviewed pull request';
+                    }
+                    break;
+                case 'PullRequestEvent':
+                    $action = false;
+                    if ($item['payload']['action'] === 'opened'){
+                        $action = 'opened pull request';
+                    }
+                    break;
                 case 'IssueCommentEvent':
                 case 'CommitCommentEvent':
                     $action = 'commented';
@@ -40,10 +53,10 @@ class FetchEventList extends Command
                     $action = 'created fork';
                     break;
                 // Skipped events
-                case "DeleteEvent";
-                case "CreateEvent";
-                case "PushEvent";
-                case "MemberEvent";
+                case 'DeleteEvent':
+                case 'CreateEvent':
+                case 'PushEvent':
+                case 'MemberEvent':
                     $action = false;
                     break;
                 default:
