@@ -18,7 +18,7 @@ class FetchEventList extends Command
 
         $events = $gitHub->fetchEvents($userName);
 
-        $githubEvents = $events->map(function($item, $key){
+        $githubEvents = $events->map(function($item, $key) {
             $repoParts = explode('/', $item['repo']['name']);
             $reponame = array_pop($repoParts);
 
@@ -27,20 +27,26 @@ class FetchEventList extends Command
                     $action = 'now watching';
                     break;
                 case 'IssuesEvent':
-                    $action = $item['payload']['action'] . ' issue';
+                    $action = $item['payload']['action'] . ' issue #' . $item['payload']['issue']['number'];
                     break;
                 case 'PullRequestReviewEvent':
                 case 'PullRequestReviewCommentEvent':
                     $action = false;
                     if (in_array($item['payload']['action'], ['created', 'submitted'])) {
-                        $action = 'reviewed pull request';
+                        $action = 'reviewed pull request #' . $item['payload']['pull_request']['number'];
                     }
                     break;
                 case 'PullRequestEvent':
-                    $action = false;
-                    if ($item['payload']['action'] === 'opened'){
-                        $action = 'opened pull request';
+                    $payloadAction = $item['payload']['action'];
+                    if ($payloadAction === 'closed') {
+                        if ($item['payload']['pull_request']['merged'] === true) {
+                            $payloadAction = 'merged';
+                        } else {
+                            $payloadAction = 'declined';
+                        }
                     }
+
+                    $action = $payloadAction . ' pull request #' . $item['payload']['pull_request']['number'];
                     break;
                 case 'IssueCommentEvent':
                 case 'CommitCommentEvent':
