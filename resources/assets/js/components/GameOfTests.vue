@@ -2,7 +2,7 @@
     <tile :position="position" modifiers="overflow">
         <transition name="fade">
             <section v-if="state === 'totals'" class="statistics statistics--absolute" key="totals">
-                <h1>Game of Tests - Totals</h1>
+                <h1>GoT - Totals</h1>
                 <ul>
                     <li class="statistic" v-for="total in totals" :key="total.author_slug">
                         <span class="statistic__label">{{ total.author }}</span>
@@ -11,7 +11,7 @@
                 </ul>
             </section>
             <section v-if="state === 'month'" class="statistics statistics--absolute" key="month">
-                <h1>Game of Tests - Last month</h1>
+                <h1>GoT - Last month</h1>
                 <ul>
                     <li class="statistic" v-for="total in month" :key="total.author_slug">
                         <span class="statistic__label">{{ total.author }}</span>
@@ -20,7 +20,7 @@
                 </ul>
             </section>
             <section v-if="state === 'teams'" class="statistics statistics--absolute" key="teams">
-                <h1>Game of Tests - Teams</h1>
+                <h1>GoT - Teams</h1>
                 <ul>
                     <li class="statistic" v-for="(team, index) in teams" :key="team.author_slug">
                         <span class="statistic__label">{{ team.author }}</span>
