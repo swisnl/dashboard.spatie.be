@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Artisan;
 use Illuminate\Routing\Controller;
 use App\Services\TweetHistory\TweetHistory;
 
@@ -18,5 +19,12 @@ class DashboardController extends Controller
 
             'usingNodeServer' => usingNodeServer(),
         ]);
+    }
+
+    public function update()
+    {
+        Artisan::call('dashboard:update');
+
+        echo 'ok';
     }
 }
