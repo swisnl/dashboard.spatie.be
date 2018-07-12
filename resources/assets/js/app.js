@@ -2,6 +2,7 @@ import './bootstrap.js';
 
 import Echo from 'laravel-echo';
 import Vue from 'vue';
+import axios from 'axios';
 
 import Dashboard from './components/Dashboard';
 import Calendar from './components/Calendar';
@@ -59,5 +60,7 @@ new Vue({
         }
 
         this.echo = new Echo(options);
+
+        axios.get('/update').then(console.log).catch(console.error);
     },
 });
