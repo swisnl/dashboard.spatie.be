@@ -20,8 +20,12 @@ class FetchFeedback extends Command
     {
         $httpClient = new Client();
         $url = config('services.feedback.url');
-        $feedback = json_decode($httpClient->request('GET', $url)->getBody()->getContents(), true);
+//        $feedback = json_decode($httpClient->request('GET', $url)->getBody()->getContents(), true);
 
-        event(new FeedbackFetched($feedback));
+        event(new FeedbackFetched([
+            'tevreden' => '?',
+            'ontevreden' => '?',
+            'neutraal' => '?',
+        ]));
     }
 }
